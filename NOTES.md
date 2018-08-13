@@ -66,4 +66,24 @@
   - declarations is an array of all components that will reside in this module. We only list AppComponent here. We'll soon be adding more components. When we generate new components using the CLI, they will automatically be added.
   - bootstrapping refers to launching an app with the minimum required resources. It has nothing to do with front-end framework bootstrap. Here bootstrap is an array of components required immediately upon launching the application. Because it uses AppComponent right away, that component must be avail as soon as the app boots.
 4. Class declaration
-  - The root module requires a class declaration. 
+  - The root module requires a class declaration.
+# Components
+1. Components
+  - Components are reusable units of code that contain business and user interface logic as well as html and css. Everything  in Angular is a component.
+  - To generate a new component we can use
+  - ``` terminal
+      $ ng g component welcome
+    ```
+  - Angular has generated a basic app, which we can run this to load it
+  - ``` terminal
+      $ ng serve
+    ```
+2. The Root Component
+  - Every angular app requires a root component. All other components reside in this primary root component.
+  - if you open src/app, you can see that Angular CLI has already generate five files. For of these begin with app.component. They include the component itself(app.component.ts), tests for the component (app.component.spec.ts), and HTML and CSS for the component(app.domponent.html & app.component.css).
+  - app.module.ts is an essential part of the angular application.
+3. Nerve Center of component
+  - Looking at the app.component.ts, this file will import any basic functionality it needs. Our component is broken into: annotation and class declaration. All components have both an annotation and class declaration.
+  - The annotation includes all code inside of @Component. It deals with how our component looks. It tells the component where it should go on the page(selector), how it should look(templateUrl), and how it should be styled(styleUrls).
+  - Class declaration includes all code inside the AppComponent class. It contains logic that defines the components behavior. For instance, we'll create a component to display information about each Task, the template will display its description and a checkbox to mark a Task complete. The class declaration will contain a method to actually update that task complete property.
+  - Class annotation determines how a component appears, class declaration defines how it behaves.
