@@ -1,0 +1,2 @@
+e2e is a directory for tests(end2end), it checks the users experience.
+this directory contains app.po.ts & app.e2e-specs.ts and a tsconfig.json files for configs.
